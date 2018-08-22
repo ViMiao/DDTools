@@ -48,6 +48,7 @@ def main():
             break
         elif projectCalPath:
             dataExtracrion(projectCalPath)
+            # exit无法退出
     exit
     # dataExtracrion(filePath)
         
