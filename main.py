@@ -9,14 +9,14 @@ def mainjssRead(mainjssPath):
     
     try:
         for line in mainjssOut:
-            print(line)
+            print("test" + line)
     finally:
         mainjssOut.close()
 
 def dataExtracrion(CalPath):
     #提取计算数据并输出
     resultPath = os.path.join(CalPath, '设计结果\\')
-    mainjssPath = os.path.join(resultPath, 'mainjss.txt')
+    mainjssPath = os.path.join(resultPath, 'mainjss.out')
     print(mainjssPath)
     mainjssRead(mainjssPath)
 
@@ -34,22 +34,22 @@ def projectCalPathJudgment(theNewPath):
 
 def main():
     
-    filePath = 'D:\\Cal-Temp\\Analysis-博物馆-上部计算-1.7.1.0\\'
-    print('filePath type is: ' + str(type(filePath)))
+    # filePath = 'e:\Workspace\Project\大理嘉年华\施工图设计-单体\Analysis-C户型-L-x向梁高调整-1.7.1.0\'
+    # print('filePath type is: ' + str(type(filePath)))
     # f = open(filePath)
     # for txt in f.readlines():
     #     print(txt)
     # f.close()
     
-    # while True:
-    #     projectCalPath = input("请拖拽或输入计算文件夹或文件路径：>>")
-    #     projectCalPath = projectCalPathJudgment(projectCalPath)
-    #     if projectCalPath == "exit":
-    #         break
-    #     elif projectCalPath:
-    #         dataExtracrion(projectCalPath)
-    # exit
-    dataExtracrion(filePath)
+    while True:
+        projectCalPath = input("请拖拽或输入计算文件夹或文件路径：>>")
+        projectCalPath = projectCalPathJudgment(projectCalPath)
+        if projectCalPath == "exit":
+            break
+        elif projectCalPath:
+            dataExtracrion(projectCalPath)
+    exit
+    # dataExtracrion(filePath)
         
             
 if __name__=="__main__":
