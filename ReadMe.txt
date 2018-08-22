@@ -1,6 +1,3 @@
-# DDTools
-Design Development Tools for structural engineer in China
-
 Design Development Tools
 简称 DDtools
 
