@@ -44,7 +44,7 @@ def main():
     while True:
         projectCalPath = input("请拖拽或输入计算文件夹或文件路径：>>")
         if projectCalPath == "exit":
-            print("程序结束")
+            print("程序结束!")
             break
         else:
             projectCalPath = projectCalPathJudgment(projectCalPath)
