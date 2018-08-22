@@ -43,12 +43,12 @@ def main():
     
     while True:
         projectCalPath = input("请拖拽或输入计算文件夹或文件路径：>>")
-        projectCalPath = projectCalPathJudgment(projectCalPath)
         if projectCalPath == "exit":
+            print("程序结束")
             break
-        elif projectCalPath:
+        else:
+            projectCalPath = projectCalPathJudgment(projectCalPath)
             dataExtracrion(projectCalPath)
-            # exit无法退出
     exit
     # dataExtracrion(filePath)
         
