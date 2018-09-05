@@ -22,7 +22,8 @@ def dataExtracrion(CalPath):
 
 
 def projectCalPathJudgment(theNewPath):
-    #文件路径判断，如果是文件夹路径则直接输出文件夹路径；如果是文件路径则去除文件名后直接输出文件路径
+    #文件路径判断，如果是文件夹路径则直接输出文件夹路径；如果是文件路径则去除文件名后直接输出文件路径，否则返回False
+    #返回值为计算文件夹路径或False
     if os.path.isfile(theNewPath):
         theNewPath = os.path.dirname(os.path.abspath(theNewPath))
         return(theNewPath+"\\")
@@ -52,10 +53,12 @@ def main():
                 # "exit" 程序结束
             else:
                 projectCalPath = projectCalPathJudgment(projectCalPath)
+                # 文件夹判断，如果是文件夹路径则返回文件夹路径；如果是文件路径则去除文件名后返回文件路径，否则返回False
                 if projectCalPath:
                     dataExtracrion(projectCalPath)
                 else:
-                    print("文件夹或文件路径错误，请重新输入！")
+                    pass
+                    
 
     # dataExtracrion(filePath)
                 
