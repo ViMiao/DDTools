@@ -29,7 +29,6 @@ def projectCalPathJudgment(theNewPath):
     elif os.path.isdir(theNewPath):
         return(theNewPath)
     else:
-        print("文件夹或文件路径错误，请重新输入！")
         return False
 
 def main():
@@ -42,16 +41,24 @@ def main():
     # f.close()
     
     while True:
-        projectCalPath = input("请拖拽或输入计算文件夹或文件路径：>>")
-        if projectCalPath == "exit":
-            print("程序结束!")
+        try:
+            projectCalPath = input("请拖拽或输入计算文件夹或文件路径：>>")
+        except EOFError:
             break
         else:
-            projectCalPath = projectCalPathJudgment(projectCalPath)
-            dataExtracrion(projectCalPath)
-    exit
+            if projectCalPath == "exit":
+                print("程序结束!")
+                break
+                # "exit" 程序结束
+            else:
+                projectCalPath = projectCalPathJudgment(projectCalPath)
+                if projectCalPath:
+                    dataExtracrion(projectCalPath)
+                else:
+                    print("文件夹或文件路径错误，请重新输入！")
+
     # dataExtracrion(filePath)
-        
-            
+                
 if __name__=="__main__":
     main()
+    # when ruan, not import
