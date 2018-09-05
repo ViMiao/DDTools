@@ -1,7 +1,6 @@
 
 import os, sys
 
-
 def mainjssRead(mainjssPath):
     print('Path Type is:' + str(type(mainjssPath)))
     
