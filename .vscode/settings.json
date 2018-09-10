@@ -1,4 +1,8 @@
 {
     // 控制字体系列。
     "editor.fontFamily": "Consolas, 'Courier New', monospace, 等线",
+    
+    "python.pythonPath": "c:\\Engine\\Engineering\\Anaconda3_x64\\python.exe",
+    "python.linting.pylintPath": "c:/Engine/Engineering/Anaconda3_x64/Scripts/pylint.exe",
+    "editor.fontSize": 18,
 }

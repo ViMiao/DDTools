@@ -1,5 +1,5 @@
 
-import os, sys
+import os, sys, ProjectCalFile 
 
 def mainjssRead(mainjssPath):
     print('Path Type is:' + str(type(mainjssPath)))
@@ -56,11 +56,13 @@ def main():
                 if projectCalPath:
                     dataExtracrion(projectCalPath)
                 else:
-                    pass
+                    print("文件夹或文件路径错误，请重新输入！")
                     
 
     # dataExtracrion(filePath)
                 
 if __name__=="__main__":
     main()
+    test = ProjectCalFile.StrProject("new test")
+    test.printPath()
     # when ruan, not import
